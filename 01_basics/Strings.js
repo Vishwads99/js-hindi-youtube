@@ -32,3 +32,5 @@ console.log(url.replace('%20','-'));
 console.log(url.includes('hitesh')) //Ask Question
 
 console.log(gameName.split('-')) // Seprates and creates array based on seprator in [' ']
+
+//Note all functions of string are given in s.s 129 and 130 of laptop....
