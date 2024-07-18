@@ -55,12 +55,33 @@ const users = [    //this is array of  objects
 
 users[1].email
 
-console.log(tinderuser);
+// console.log(tinderuser);
 
-console.log(Object.keys(tinderuser)); // result is all keys are in array now by this (Object.keys) Method.
-console.log(Object.values(tinderuser));
-console.log(Object.entries(tinderuser));
+// console.log(Object.keys(tinderuser)); // result is all keys are in array now by this (Object.keys) Method.
+// console.log(Object.values(tinderuser));
+// console.log(Object.entries(tinderuser));
 
-console.log(tinderuser.hasOwnProperty('name')); //checks whether a property is present in object or not
+// console.log(tinderuser.hasOwnProperty('name')); //checks whether a property is present in object or not
 
 //More properties of objects are in s.s 134 of laptop
+
+
+
+// ********************Destructure of objects****************************
+
+const course = {
+    coursename: "js in hindi",
+    price: "999",
+    courseInstructor: "hitesh",
+}
+
+//course.courseInstructor  //every time we cannot write this so;
+
+const {courseInstructor: instructor} = course //destructuring of object (we can now directly call courseinstructor by using word instructor and also we not have to use dot operator)
+ 
+console.log(instructor);
+
+//this is called the destructure of object.
+
+// NOTE: object jiska koi name na ho , vo hai JSON  format Api....
+// Json is a format for object.
