@@ -22,3 +22,4 @@ do {
 } while (score <= 10);
 
 // in this type of loop , it will compulsory run one time , as first do is occuring and then condition is checked.
+console.log(score)
