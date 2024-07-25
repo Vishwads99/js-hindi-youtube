@@ -4,7 +4,7 @@ coding.forEach(function (val){
     console.log(val);
 })   //here we need callback function which do not have name
 
-// coding.forEach( (item) => {
+// coding.forEach( (item) => {    //we can also use arrow functions for call back
 //     console.log(item);
 // } )
 
