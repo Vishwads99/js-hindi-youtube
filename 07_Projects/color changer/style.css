@@ -1,0 +1,70 @@
+html {
+    margin: 0;
+  }
+
+.top_items {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    background-color: lightgrey;
+
+
+}
+
+#home{
+    border: 2px solid black;
+    padding:2px;
+    margin-right: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: gray;
+    border-radius: 15px;
+    text-decoration: none;
+    color: black
+}
+
+#channel{
+    border: 2px solid rgba(100, 100, 100, 0.9);
+    padding: 2px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 15px;
+    text-decoration: none;
+    color: black
+
+
+
+}
+  
+span {
+    display: block;
+  }
+.canvas {
+    margin: 100px auto 100px;
+    width: 80%;
+    text-align: center;
+  }
+  
+.button {
+    width: 100px;
+    height: 100px;
+    border: solid black 2px;
+    display: inline-block;
+  }
+  
+#grey {
+    background: grey;
+  }
+  
+#white {
+    background: white;
+  }
+#blue {
+    background: blue;
+  }
+#yellow {
+    background: yellow;
+  }
+  
