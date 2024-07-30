@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Project 2</title>
+</head>
+<body>
+    <h1>chai aur JavaScript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+   
+</body>
+<script>
+    // setInterval(function(){
+    //     console.log("vishwa",Date.now()); //Date.now method shows current date
+    // },2000)
+
+    const sayDate = function(str){
+        console.log(str,Date.now());
+    }
+
+    const intervalId = setInterval(sayDate,1000,"vishwa"); // in this method we can also pass third parameter like this..
+
+    //we want that when we press start printing should start and when we press stop printing should stop hence;
+    const startButton = document.querySelector('#start');
+    const stopButton = document.querySelector('#stop');
+
+    startButton.addEventListener('click',function(){
+        setInterval(sayDate,1000,"vishwa")
+    })
+
+    stopButton.addEventListener('click',function(){
+        clearInterval(intervalId)
+    })
+
+</script>
+</html>
