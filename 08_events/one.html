@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html Events </title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+<script>
+    // document.getElementById('owl').onclick = function(){ //this is also not prefferable
+    //     alert('owl clicked');
+    // }
+    //attachEvent
+    //jQuery Framework - on
+    
+     // type ,timestamp , defaultPrevented
+    // target, toElement, srcElement, currentTarget
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keycode
+
+    // document.getElementById('images').addEventListener('click',function(e){  //this e is called event object.
+    //    console.log("Clicked images inside ul");
+    // }, false)
+    // document.getElementById('owl').addEventListener('click',function(e){  //this e is called event object.
+    //    console.log("owl clicked");
+    //    e.stopPropagation() //this method stop propagation (i.e bubbling or capturing) and in this example it will only print 'owl clicked' and not bubbled to  upper statement
+    // }, false) //the written false is ByDefault. write it or not.(Event Propagation)
+    // // Above example also try with false....
+
+    // // false means bubbling. it goes from small to big.(By Default.)
+    // // true means capturing. it goes from big to small.
+
+    // document.getElementById('google').addEventListener('click',function(e){
+    //     e.preventDefault();
+    //     //e.stopPropagation();
+    //     console.log("google clicked");
+    // }, false)
+
+
+    // Task is : When we click any of iamges they disappear....
+
+    document.querySelector('#images').addEventListener('click',function(e){
+        //console.log(e.target);
+        //console.log(e.target.parentNode); //parent node means it gives the <li> element inside which image is present.
+        console.log(e.target.tagName); //this tagName method gives the name of element i.e (UL,IMG,LI ...etc)
+        console.log(e.target.id);
+        if (e.target.tagName === 'IMG') { // ki agar wo image tag hoga to hi delete karna. kyuki previously agar ham li tag pe
+            let removeNode = e.target.parentNode // click karte the to sab kuch gayab ho jata tha. hence to avoid it we got tagname field.
+            removeNode.remove() //this method removes element. try it... 
+        }
+        
+    
+    })
+
+    //removeNode.parentNode.removeChild(removeNode) //this is another method to remove
+   
+   
+    
+</script>
