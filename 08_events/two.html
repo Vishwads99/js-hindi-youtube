@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Project</title>
+</head>
+<body>
+    <h1>chai aur code</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // setTimeout(function(){ //this function is used to run something after specific time. 
+    //     console.log('vishwa'); //the time written is in milisecs hence we wrote 2000.(i.e 2s)
+    // }, 2000)  
+
+    const sayVishwa = function () {
+        console.log('vishwa');
+    }
+    setTimeout(sayVishwa,2000);// in this we have given reference of other function in setTimeout method. dont use () this parenthesis while giving reference.
+
+    const textChange = function(){
+        document.querySelector('h1').innerHTML='best javascript series'
+    }
+    const changeMe = setTimeout(textChange,3000);
+
+    //clearTimeout(changeMe); //the cleartimeout method is usesd to stop the working of  setTimeout method.
+
+    //we want to click button and then clearTimeout to work hence;
+    const StopButton = document.querySelector('button')
+
+    StopButton.addEventListener('click',function(){
+        clearTimeout(changeMe);
+        console.log("Stopped");
+    })
+
+
+    //Note : Same like setTimeout and clearTimeout there are setInterval and clearInterval.
+    // setInterval is same as setTimeout but , setTimeout runs only one time and setInterval runs Continuously
+    // after given time intervals  
+
+</script>
+</html>
