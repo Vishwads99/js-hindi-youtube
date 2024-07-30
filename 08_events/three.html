@@ -20,14 +20,16 @@
         console.log(str,Date.now());
     }
 
-    const intervalId = setInterval(sayDate,1000,"vishwa"); // in this method we can also pass third parameter like this..
+     
 
     //we want that when we press start printing should start and when we press stop printing should stop hence;
     const startButton = document.querySelector('#start');
     const stopButton = document.querySelector('#stop');
 
+    let intervalId; //IMP we can declare this like this and again change in block scope just use 'let' instead of 'const'
+
     startButton.addEventListener('click',function(){
-        setInterval(sayDate,1000,"vishwa");
+        intervalId=setInterval(sayDate,1000,"vishwa"); // in this method we can also pass third parameter like this..
     })
 
     stopButton.addEventListener('click',function(){
