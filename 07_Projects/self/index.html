@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="full">
+        <h1>Calculator</h1>
+        <form>
+            <label for="number">Enter First Number:</label>
+            <input type="number" id="number" placeholder="Enter number">
+
+            <h1 class="sign">+</h1>
+            <label for="number">Enter second Number:</label>
+            <input type="number" id="number" placeholder="Enter number">
+            <br>
+            <br>
+            <br>
+            <button type="submit">Result</button>
+        </form>
+        <div id="result"></div>
+    </div>
+</body>
+<script>
+    const button = document.querySelector('button')
+    const result = document.getElementById('result')
+    button.addEventListener('click',function(e){
+        e.preventDefault()
+        result.innerHTML = "Hello World!!"
+    })
+</script>
+</html>
