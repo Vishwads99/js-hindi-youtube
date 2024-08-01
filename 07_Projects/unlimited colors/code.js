@@ -4,7 +4,7 @@ const randomColor = function(){
     let hex = '0123456789ABCDEF';
     let color = '#';
     for (let i = 0; i < 6; i++) {
-        color += hex[Math.floor(Math.random() * 16)];
+        color += hex[Math.floor(Math.random() * 16)];  //do math.random and multiply by the number till we want the results 
     }
     return color;
 } // Remember this step...
