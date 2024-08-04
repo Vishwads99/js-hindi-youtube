@@ -14,8 +14,8 @@
             <input type="number" id="number" placeholder="Enter number">
 
             <h1 class="sign">+</h1>
-            <label for="number">Enter second Number:</label>
-            <input type="number" id="number" placeholder="Enter number">
+            <label for="number1">Enter second Number:</label>
+            <input type="number" id="number1" placeholder="Enter number">
             <br>
             <br>
             <br>
@@ -23,13 +23,24 @@
         </form>
         <div id="result"></div>
     </div>
-</body>
-<script>
+    <script>
     const button = document.querySelector('button')
     const result = document.getElementById('result')
+    function addition(a,b){
+        return a + b;
+    }
+    
+
     button.addEventListener('click',function(e){
-        e.preventDefault()
-        result.innerHTML = "Hello World!!"
+        e.preventDefault();
+        let x = parseInt(document.getElementById('number').value);
+        let y = parseInt(document.getElementById('number1').value);
+        
+        result.innerHTML = `Result: ${addition(x,y)}`;
+        
     })
-</script>
+    </script>
+
+</body>
+
 </html>
