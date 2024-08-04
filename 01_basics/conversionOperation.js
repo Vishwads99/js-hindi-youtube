@@ -31,6 +31,8 @@ let stringNumber= String(someNumber)
 // console.log(stringNumber);
 // console.log(typeof(stringNumber));
 
+//Note : When we add something with the string like(number,bool,string,etc..) it also gets converted into string.
+
 
 // **************************Operations*********************
 

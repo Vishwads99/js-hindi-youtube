@@ -21,5 +21,5 @@ let isLoggedIn= false
 
 console.log(typeof "vishwa"); // it is used to show type of data i.e datatype
 console.log(typeof age);
-console.log(typeof null); //datatype of null is object.
+console.log(typeof null); //datatype of null is object. (Remember!!!)
 console.log(typeof undefined);
