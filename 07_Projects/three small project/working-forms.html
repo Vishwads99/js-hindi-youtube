@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forms</title>
+</head>
+<body>
+    <form action="" onsubmit="submitted()">
+    Your Email please: <input type="email" id="input" onfocus="onfun()" onblur="offfun()" onselect="selecti()" required>
+    <input type="submit">
+    </form>
+</body>
+<script>
+    let input = document.getElementById('input');
+
+    function onfun(){
+        input.style.backgroundColor="yellow";
+    }
+
+    function offfun(){
+        input.style.backgroundColor="grey";
+    }
+
+    function submitted(){
+        alert(`Congratulations ${input.value} is Submitted!!!`);
+    }
+
+    function selecti(){
+        alert(`You selected something`);
+    }
+</script>
+</html>
